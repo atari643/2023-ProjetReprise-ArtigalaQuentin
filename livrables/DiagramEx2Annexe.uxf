@@ -1,0 +1,18 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>0</x><y>80</y><w>500</w><h>240</h></coordinates><panel_attributes>labyrinthe
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>140</y><w>210</w><h>40</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ISalle
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>230</y><w>210</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ILabyrinthe
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>230</y><w>210</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Collection&lt;ISalle&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>250</y><w>310</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>10</x><y>380</y><w>500</w><h>180</h></coordinates><panel_attributes>personnages
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>410</y><w>210</w><h>40</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IPersonnage</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>10</x><y>600</y><w>500</w><h>160</h></coordinates><panel_attributes>vue2D
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>20</x><y>680</y><w>470</w><h>80</h></coordinates><panel_attributes>vue2D.sprites
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>630</y><w>210</w><h>40</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IVue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>630</y><w>210</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Collection&lt;ISprite&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>640</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>710</y><w>210</w><h>40</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ISprite</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>420</y><w>370</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;350;10;350;300;40;300</additional_attributes></element></diagram>
