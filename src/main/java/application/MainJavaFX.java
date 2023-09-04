@@ -22,6 +22,7 @@ public class MainJavaFX extends Application {
         
         stage.setScene(vue.scene);
         stage.show();
+        System.out.println("");
         
         //rafraichissement de la vue
         AnimationTimer timer = new AnimationTimer() {
