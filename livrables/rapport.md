@@ -1,0 +1,2 @@
+# Réalisation des deux premières séances 
+Création du projet git avec quelque difficulté dans la liaison entre netbean et gitlab car étant une nouvelle manipulation. Puis réalisation de l'objectif 1 avec quelque inconpréhension de la certaine consigne. La réalisation d'une démo de labyrinthe sur excel et la réalisation de deux diagramme uml sur umlet. La fin de la dernière séance mais fin à l'objectif 1. 
