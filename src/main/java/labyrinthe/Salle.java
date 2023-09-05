@@ -12,7 +12,11 @@ public class Salle implements ISalle {
 
     int x;
     int y;
-
+    /**
+     * Création d'une salle
+     * @param x abscisse de la salle
+     * @param y ordonnee de la salle
+     */
     public Salle(int x, int y) {
         this.x = x;
         this.y = y;

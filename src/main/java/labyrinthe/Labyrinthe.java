@@ -26,8 +26,12 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         sortie=new Salle(f.lireNombre(), f.lireNombre());
         this.add(entree);
         this.add(sortie);
-        while(f.lireNombre()!=-1){
-            this.add(new Salle(f.lireNombre(), f.lireNombre()));
+        int x = 0;
+        int y=0;
+        while(x>=0 && y>=0){
+            x=f.lireNombre();
+            y=f.lireNombre();
+            this.add(new Salle(x, y));
         }
         
     }
