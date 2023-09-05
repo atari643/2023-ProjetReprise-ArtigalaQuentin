@@ -22,7 +22,14 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         // dimensions
         largeur=f.lireNombre(); 
         hauteur=f.lireNombre(); 
-        // ...
+        entree=new Salle(f.lireNombre(), f.lireNombre());
+        sortie=new Salle(f.lireNombre(), f.lireNombre());
+        this.add(entree);
+        this.add(sortie);
+        while(f.lireNombre()!=-1){
+            this.add(new Salle(f.lireNombre(), f.lireNombre()));
+        }
+        
     }
 
     @Override
