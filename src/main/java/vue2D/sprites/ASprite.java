@@ -32,7 +32,7 @@ public abstract class ASprite implements ISprite {
     }
     @Override
     public void dessiner(GraphicsContext g) {
-        g.drawImage(imgSprite, xSprite, xSprite);
+        g.drawImage(imgSprite, xSprite, ySprite);
     }
 
     @Override

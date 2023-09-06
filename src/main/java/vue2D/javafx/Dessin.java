@@ -35,6 +35,7 @@ public class Dessin extends Canvas {
     
     public void chargementImages(){
     	solImage = new Image("file:icons/pyramide.png");
+        
     }
     
     public void dessinFond(){
@@ -46,12 +47,17 @@ public class Dessin extends Canvas {
         for(ISalle labys: labyrinthe){
             tampon.fillRect(labys.getX()*unite, labys.getY()*unite, unite, unite);
         }
+        tampon.setFill(Color.BLUE);
+        tampon.fillRect(labyrinthe.getEntree().getX()*unite, labyrinthe.getEntree().getY()*unite, unite, unite);
+        tampon.setFill(Color.GREEN);
+        tampon.fillRect(labyrinthe.getSortie().getX()*unite, labyrinthe.getSortie().getY()*unite, unite, unite);
+        
         
     }
     public void dessinSprite(){
-        tampon.setFill(Color.YELLOW);
         for(ISprite sprite: sprites){
-            tampon.fillRect(sprite.getPosition().getX()*unite,sprite.getPosition().getY()*unite,unite,unite);
+            sprite.setCoordonnees(sprite.getPosition().getX()*unite-5, sprite.getPosition().getY()*unite-15);
+            sprite.dessiner(tampon);
         }
     }
 
