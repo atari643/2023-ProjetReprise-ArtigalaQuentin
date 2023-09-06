@@ -34,10 +34,10 @@ public class Salle implements ISalle {
 
     @Override
     public boolean estAdjacente(ISalle autre) {
-        if (autre.getX() == x && autre.getY() == y + 1 || autre.getY() == y - 1) {
+        if (autre.getX() == x && (autre.getY() == y + 1 || autre.getY() == y - 1)) {
             return true;
         }
-        if(autre.getY()==y && autre.getX()==x+1 || autre.getX()==x-1){
+        if(autre.getY()==y && (autre.getX()==x+1 || autre.getX()==x-1)){
             return true;
         }
         return false;
