@@ -11,16 +11,16 @@ import labyrinthe.ISalle;
  *
  * @author qartigala
  */
-public abstract class APersonnage implements IPersonnage {
-    private ISalle position;
+public class Heros extends APersonnage{
+    public ISalle salleChoisi;
     @Override
-    public ISalle getPosition() {
-        return this.position;
-    }
-
-    @Override
-    public void setPosition(ISalle s) {
-        this.position=s;
+    public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
+        if(sallesAccessibles.contains(salleChoisi)){
+            return salleChoisi;
+        }else{
+            return this.getPosition();
+        }
+        
     }
     
 }

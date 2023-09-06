@@ -46,6 +46,7 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         if(this.contains(salle)){
             return false;
         }
+        super.add(salle);
         return true;
     }
 
