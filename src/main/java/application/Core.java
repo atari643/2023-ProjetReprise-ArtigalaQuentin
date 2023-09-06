@@ -13,10 +13,11 @@ import vue2D.sprites.ISprite;
 import vue2D.sprites.MonstreSprite;
 
 /**
- * 
+ *
  * @author arpecher
  */
 public class Core {
+
     ISprite heros;
     ILabyrinthe labyrinthe;
     ISprite monstre;
@@ -32,9 +33,11 @@ public class Core {
         Heros h = new personnages.Heros(labyrinthe.getEntree());
         this.heros = new HerosSprite(h, labyrinthe);
         vue.add(this.heros);
-        Monstre m=new personnages.Monstre(labyrinthe.getSortie());
-        this.monstre = new MonstreSprite(m, labyrinthe);
-        vue.add(this.monstre);
+        for (int i = 0; i < 10; i++) {
+            Monstre m = new personnages.Monstre(labyrinthe.getSortie());
+            this.monstre = new MonstreSprite(m, labyrinthe);
+            vue.add(this.monstre);
+        }
     }
 
     protected void jeu(IVue vue) {
