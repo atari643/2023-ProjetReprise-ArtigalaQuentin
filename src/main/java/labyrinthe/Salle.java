@@ -46,7 +46,6 @@ public class Salle implements ISalle {
     @Override
     public int hashCode() {
         return x + ((x + y) * (x + y + 1) / 2);
-
     }
 
     @Override
