@@ -13,12 +13,16 @@ import labyrinthe.ISalle;
  */
 public class Heros extends APersonnage{
     public ISalle salleChoisi;
+    
+    public Heros(ISalle salle){
+         super.setPosition(salle);
+    }
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
         if(sallesAccessibles.contains(salleChoisi)){
             return salleChoisi;
         }else{
-            return this.getPosition();
+            return super.getPosition();
         }
         
     }
