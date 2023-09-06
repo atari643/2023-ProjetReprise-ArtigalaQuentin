@@ -35,6 +35,19 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
         }
         
     }
+    @Override
+    public boolean add(ISalle salle){
+        if(salle.getX()<0 || salle.getX()>largeur){
+            return false;
+        }
+        if(salle.getY()<0 || salle.getY()>hauteur){
+            return false;
+        }
+        if(this.contains(salle)){
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage bob) {

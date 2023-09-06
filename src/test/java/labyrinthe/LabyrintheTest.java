@@ -5,6 +5,7 @@
 package labyrinthe;
 
 import java.util.Collection;
+import javax.security.auth.login.FailedLoginException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import personnages.IPersonnage;
@@ -16,7 +17,8 @@ import personnages.IPersonnage;
 public class LabyrintheTest {
 
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 2
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 2
      */
     @Test
     public void testCreerLabyrintheLv2() {
@@ -37,7 +39,8 @@ public class LabyrintheTest {
     }
 
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 3
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 3
      */
     @Test
     public void testCreerLabyrintheLv3() {
@@ -56,8 +59,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 6
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 6
      */
     @Test
     public void testCreerLabyrintheLv6() {
@@ -76,8 +81,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 7
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 7
      */
     @Test
     public void testCreerLabyrintheLv7() {
@@ -96,8 +103,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 8
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 8
      */
     @Test
     public void testCreerLabyrintheLv8() {
@@ -116,8 +125,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 9
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 9
      */
     @Test
     public void testCreerLabyrintheLv9() {
@@ -136,8 +147,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 10
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 10
      */
     @Test
     public void testCreerLabyrintheLv10() {
@@ -156,8 +169,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 11
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 11
      */
     @Test
     public void testCreerLabyrintheLv11() {
@@ -176,8 +191,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level 7
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * 7
      */
     @Test
     public void testCreerLabyrintheLv12() {
@@ -196,8 +213,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level invalide 1
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * invalide 1
      */
     @Test
     public void testCreerLabyrintheLvInv1() {
@@ -216,8 +235,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level invalide 2
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * invalide 2
      */
     @Test
     public void testCreerLabyrintheLvInv2() {
@@ -236,8 +257,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level invalide 3
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * invalide 3
      */
     @Test
     public void testCreerLabyrintheLvInv3() {
@@ -256,8 +279,10 @@ public class LabyrintheTest {
             assertFalse(labys.get(i - 1).getY() > labys.getHauteur());
         }
     }
+
     /**
-     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level invalide 4
+     * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
+     * invalide 4
      */
     @Test
     public void testCreerLabyrintheLvInv4() {
