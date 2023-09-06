@@ -33,7 +33,7 @@ public class Dessin extends Canvas {
         dessinFond();
     }
     
-     public void chargementImages(){
+    public void chargementImages(){
     	solImage = new Image("file:icons/pyramide.png");
     }
     
