@@ -1,5 +1,5 @@
 - Objectif 1 : dessiner un labyrinthe // fait le 05/09
-- Objectif 2 : tests unitaires et am ́eliorations de la robustesse du code // non fait
+- Objectif 2 : tests unitaires et am ́eliorations de la robustesse du code // fait le 06/09
 - Objectif 3 : d ́eplacer des personnages // non fait
 - Objectif 4 : monstres (polymorphisme sur les personnages) // non fait
 - Objectif 5 : cas d’utilisation non nominal
