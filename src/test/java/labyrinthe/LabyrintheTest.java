@@ -4,11 +4,13 @@
  */
 package labyrinthe;
 
+import java.io.IOException;
 import java.util.Collection;
 import javax.security.auth.login.FailedLoginException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import personnages.IPersonnage;
+
 
 /**
  *
@@ -218,7 +220,7 @@ public class LabyrintheTest {
      * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
      * invalide 1
      */
-    @Test
+    @Test(expected = IOException.class)
     public void testCreerLabyrintheLvInv1() {
         Labyrinthe labys = new Labyrinthe();
         labys.creerLabyrinthe("labys/levelInvalide1.txt");
@@ -240,7 +242,7 @@ public class LabyrintheTest {
      * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
      * invalide 2
      */
-    @Test
+    @Test(expected = IOException.class)
     public void testCreerLabyrintheLvInv2() {
         Labyrinthe labys = new Labyrinthe();
         labys.creerLabyrinthe("labys/levelInvalide2.txt");
@@ -262,7 +264,7 @@ public class LabyrintheTest {
      * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
      * invalide 3
      */
-    @Test
+    @Test(expected = IOException.class)
     public void testCreerLabyrintheLvInv3() {
         Labyrinthe labys = new Labyrinthe();
         labys.creerLabyrinthe("labys/levelInvalide3.txt");
@@ -284,7 +286,7 @@ public class LabyrintheTest {
      * Test de la méthode creerLabyrinthe de la classe Labyrinthe pour le level
      * invalide 4
      */
-    @Test
+    @Test(expected = IOException.class)
     public void testCreerLabyrintheLvInv4() {
         Labyrinthe labys = new Labyrinthe();
         labys.creerLabyrinthe("labys/levelInvalide4.txt");

@@ -1,5 +1,7 @@
 package labyrinthe;
 
+import application.ExceptionInvalidFile;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import outils.Fichier;
@@ -17,33 +19,46 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     private int hauteur;
 
     @Override
-    public void creerLabyrinthe(String file) {
+    public void creerLabyrinthe(String file) throws ExceptionInvalidFile {
         Fichier f = new Fichier(file);
         // dimensions
-        largeur=f.lireNombre(); 
-        hauteur=f.lireNombre(); 
-        entree=new Salle(f.lireNombre(), f.lireNombre());
-        sortie=new Salle(f.lireNombre(), f.lireNombre());
-        this.add(entree);
-        this.add(sortie);
+        largeur = f.lireNombre();
+        hauteur = f.lireNombre();
+        boolean lecture = true;
+        entree = new Salle(f.lireNombre(), f.lireNombre());
+        sortie = new Salle(f.lireNombre(), f.lireNombre());
+        lecture=this.add(entree);
+        lecture=this.add(sortie);
+        if(lecture==false){
+            throw new ExceptionInvalidFile();
+        }
         int x = 0;
-        int y=0;
-        while(x>=0 && y>=0){
-            x=f.lireNombre();
-            y=f.lireNombre();
-            this.add(new Salle(x, y));
+        int y = 0;
+        while (lecture) {
+            x = f.lireNombre();
+            y = f.lireNombre();
+            if (y == -1) {
+                lecture = false;
+            } else {
+                if (!this.add(new Salle(x, y))) {
+                    throw new ExceptionInvalidFile();
+                }else{
+                    this.add(new Salle(x, y));
+                }
+            }
         }
-        
+
     }
+
     @Override
-    public boolean add(ISalle salle){
-        if(salle.getX()<0 || salle.getX()>largeur){
+    public boolean add(ISalle salle) {
+        if (salle.getX() < 0 || salle.getX() > largeur) {
             return false;
         }
-        if(salle.getY()<0 || salle.getY()>hauteur){
+        if (salle.getY() < 0 || salle.getY() > hauteur) {
             return false;
         }
-        if(this.contains(salle)){
+        if (this.contains(salle)) {
             return false;
         }
         super.add(salle);
@@ -53,10 +68,10 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     @Override
     public Collection<ISalle> sallesAccessibles(IPersonnage bob) {
         Collection<ISalle> sallesAcessibles = new ArrayList<>();
-        int positionX=bob.getPosition().getX();
-        int positionY=bob.getPosition().getY();
-        for(ISalle salle: this){
-            if(salle.estAdjacente(new Salle(positionX, positionY))){
+        int positionX = bob.getPosition().getX();
+        int positionY = bob.getPosition().getY();
+        for (ISalle salle : this) {
+            if (salle.estAdjacente(new Salle(positionX, positionY))) {
                 sallesAcessibles.add(salle);
             }
         }
@@ -89,4 +104,3 @@ public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
     }
 
 }
-

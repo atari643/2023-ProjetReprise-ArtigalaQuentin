@@ -16,7 +16,7 @@ import vue2D.sprites.MonstreSprite;
  *
  * @author arpecher
  */
-public class Core {
+public class Core{
 
     ISprite heros;
     ILabyrinthe labyrinthe;
@@ -81,6 +81,7 @@ public class Core {
             System.out.println("Fichier de labyrinthe non-valide");
             System.out.println("Chargement du fichier de secours ...");
             try {
+                labyrinthe.clear();
                 labyrinthe.creerLabyrinthe("labys/level7.txt");
             } catch (IOException e) {
                 System.out.println("Fichier de secours invalide !");
