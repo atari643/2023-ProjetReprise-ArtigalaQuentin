@@ -2,6 +2,6 @@
 - Objectif 2 : tests unitaires et am ́eliorations de la robustesse du code // fait le 06/09
 - Objectif 3 : d ́eplacer des personnages // fait le 06/09
 - Objectif 4 : monstres (polymorphisme sur les personnages) // fait le 06/09
-- Objectif 5 : cas d’utilisation non nominal
+- Objectif 5 : cas d’utilisation non nominal // fait le 07/09
 - Objectif 6 : ameliorations simples (animations, eclairage localise) // non fait
 - Objectif 7 : am ́eliorations plus complexes bas ́ees sur les plus courts chemins // non fait 
