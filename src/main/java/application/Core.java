@@ -17,15 +17,23 @@ import vue2D.sprites.MonstreSprite;
  * @author arpecher
  */
 public class Core {
-
+    /**
+     * gestion du sprite du heros
+     */
     ISprite heros;
+    /**
+     * Gestion du labyrinthe
+     */
     ILabyrinthe labyrinthe;
+    /**
+     * gestion du sprite du monstre
+     */
     ISprite monstre;
 
     protected void initLabyrinthe() {
         // creation du labyrinthe
         labyrinthe = new labyrinthe.Labyrinthe();
-        chargementLaby("labys/level3.txt");
+        chargementLaby("labys/level9.txt");
     }
 
     protected void initSprites(IVue vue) {

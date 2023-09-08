@@ -34,15 +34,19 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
             switch (direction) {
                 case "LEFT":
                     super.setCoordonnees(xSprite - 1, ySprite);
+                    this.imgSprite=new Image("file:icons/link/LinkRunShieldL1.gif");
                     break;
                 case "UP":
                     super.setCoordonnees(xSprite, ySprite - 1);
+                    this.imgSprite=new Image("file:icons/link/LinkRunU1.gif");
                     break;
                 case "DOWN":
                     super.setCoordonnees(xSprite, ySprite + 1);
+                    this.imgSprite=new Image("file:icons/link/LinkRunShieldD1.gif");
                     break;
                 case "RIGHT":
                     super.setCoordonnees(xSprite + 1, ySprite);
+                    this.imgSprite=new Image("file:icons/link/LinkRunR1.gif");
                     break;
             }
             return heros.salleChoisi;
