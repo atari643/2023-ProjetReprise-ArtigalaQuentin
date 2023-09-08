@@ -20,6 +20,8 @@ import personnages.Heros;
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     protected Heros heros;
+    
+    protected String direction;
 
     public HerosSprite(Heros heros, ILabyrinthe labyrinthe) {
         super(heros, new Image("file:icons/link/LinkRunShieldL1.gif"));
@@ -27,19 +29,47 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
     }
 
     @Override
+    public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
+        if (sallesAccessibles.contains(heros.salleChoisi)) {
+            switch (direction) {
+                case "LEFT":
+                    super.setCoordonnees(xSprite - 1, ySprite);
+                    break;
+                case "UP":
+                    super.setCoordonnees(xSprite, ySprite - 1);
+                    break;
+                case "DOWN":
+                    super.setCoordonnees(xSprite, ySprite + 1);
+                    break;
+                case "RIGHT":
+                    super.setCoordonnees(xSprite + 1, ySprite);
+                    break;
+            }
+            return heros.salleChoisi;
+        } else {
+            setCoordonnees(personnage.getPosition().getX() * 15 - 5, personnage.getPosition().getY() * 15 - 15);
+            return getPosition();
+        }
+    }
+
+    @Override
     public void handle(KeyEvent t) {
         switch (t.getCode()) {
             case LEFT:
-                heros.salleChoisi=new Salle(heros.getPosition().getX()-1, heros.getPosition().getY());
+                heros.salleChoisi = new Salle(heros.getPosition().getX() - 1, heros.getPosition().getY());
+                direction="LEFT";
                 break;
             case UP:
-                heros.salleChoisi=new Salle(heros.getPosition().getX(), heros.getPosition().getY()-1);
+                heros.salleChoisi = new Salle(heros.getPosition().getX(), heros.getPosition().getY() - 1);
+                direction="UP";
                 break;
             case RIGHT:
-                heros.salleChoisi=new Salle(heros.getPosition().getX()+1, heros.getPosition().getY());
+                heros.salleChoisi = new Salle(heros.getPosition().getX() + 1, heros.getPosition().getY());
+                direction="RIGHT";
                 break;
             case DOWN:
-                heros.salleChoisi=new Salle(heros.getPosition().getX(), heros.getPosition().getY()+1);
+                heros.salleChoisi = new Salle(heros.getPosition().getX(), heros.getPosition().getY() + 1);
+                direction="DOWN";
                 break;
 
         }
