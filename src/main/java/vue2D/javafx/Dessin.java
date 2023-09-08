@@ -20,6 +20,7 @@ public class Dessin extends Canvas {
     private int unite = 15;
     private GraphicsContext tampon;
     private Image solImage;
+    private Image wallImage;
 
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.sprites = sprites;
@@ -33,6 +34,7 @@ public class Dessin extends Canvas {
 
     public void chargementImages() {
         solImage = new Image("file:icons/pyramide.png");
+        wallImage = new Image("file:icons/mur0.gif");
 
     }
 
@@ -44,7 +46,7 @@ public class Dessin extends Canvas {
     public void dessinSalle() {
         tampon.setFill(Color.RED);
         for (ISalle labys : labyrinthe) {
-            tampon.fillRect(labys.getX() * unite, labys.getY() * unite, unite, unite);
+            tampon.drawImage(wallImage,labys.getX() * unite, labys.getY() * unite, unite, unite);
         }
         tampon.setFill(Color.BLUE);
         tampon.fillRect(labyrinthe.getEntree().getX() * unite, labyrinthe.getEntree().getY() * unite, unite, unite);
