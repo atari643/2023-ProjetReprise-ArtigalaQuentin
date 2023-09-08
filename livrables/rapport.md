@@ -1,2 +1,8 @@
 # Réalisation des deux premières séances 
 Création du projet git avec quelque difficulté dans la liaison entre netbean et gitlab car étant une nouvelle manipulation. Puis réalisation de l'objectif 1 avec quelque inconpréhension de la certaine consigne. La réalisation d'une démo de labyrinthe sur excel et la réalisation de deux diagramme uml sur umlet. La fin de la dernière séance mais fin à l'objectif 1. 
+# Réalisation des deux premières séances d'autonomie
+Réalisation des tests unitaires de la classe salle et labyrinthe avec des tests qui détecte une erreur dans plusieurs fichiers qui sont incorrects. Une modification de la classe add pour permettre de différencier des salles incorrectes de celle qui sont corrects. Puis ajout d'un premier personnage le héros qui a était plutôt simple. Le déplacement du personnage a était réalisé avec les flèches directionnelles. Ajout des autres entités avec les monstres qui a était une implémentation plutôt simple même si il y a eu des problèmes de collision (résolu).  
+# Réalisation des séances d'autonomie du jeudi 07/09
+Un séance de 4h fastidieuse avec l'exercice 20 qui a était compliqué dans sa compréhension et sa réalisation avec une approche complexe de la façon dont l'affichage du sprite doit être fait. Le déplacement de pixel n'est pas très claire et a était réaliser avec une réduction des performances du jeu et une insatisfaction de ma part sur le résultat. 
+
+# Réalisation de la séance d'autonomie du vendredi 08/09
