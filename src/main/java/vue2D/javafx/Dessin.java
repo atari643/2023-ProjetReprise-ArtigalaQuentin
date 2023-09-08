@@ -36,11 +36,11 @@ public class Dessin extends Canvas {
         setWidth(labyrinthe.getLargeur() * unite);
         setHeight(labyrinthe.getHauteur() * unite);
         tampon = this.getGraphicsContext2D();
-        light=new Light.Point();
-        light.setX(labyrinthe.getEntree().getX()*unite);
-        light.setY(labyrinthe.getEntree().getY()*unite);
+        light = new Light.Point();
+        light.setX(labyrinthe.getEntree().getX() * unite);
+        light.setY(labyrinthe.getEntree().getY() * unite);
         light.setZ(50);
-        
+
         light.setColor(Color.WHITE);
         Lighting lighting = new Lighting();
         lighting.setLight(light);
@@ -53,7 +53,7 @@ public class Dessin extends Canvas {
     public void chargementImages() {
         solImage = new Image("file:icons/ground.gif");
         wallImage = new Image("file:icons/mur0.gif");
-        startImage=new Image("file:icons/down.gif");
+        startImage = new Image("file:icons/down.gif");
         endImage = new Image("file:icons/sortie.gif");
 
     }
@@ -64,26 +64,27 @@ public class Dessin extends Canvas {
     }
 
     public void dessinSalle() {
-        for (int i = 0; i<labyrinthe.getLargeur();i++){
-            for(int y=0;y<labyrinthe.getHauteur();y++){
-                if(!labyrinthe.contains(new Salle(i,y))){
-                    tampon.drawImage(wallImage,i * unite, y * unite, unite, unite);
+        for (int i = 0; i < labyrinthe.getLargeur(); i++) {
+            for (int y = 0; y < labyrinthe.getHauteur(); y++) {
+                if (!labyrinthe.contains(new Salle(i, y))) {
+                    tampon.drawImage(wallImage, i * unite, y * unite, unite, unite);
                 }
             }
-            
+
         }
-        tampon.drawImage(startImage,labyrinthe.getEntree().getX() * unite, labyrinthe.getEntree().getY() * unite, unite, unite);
-        tampon.drawImage(endImage,labyrinthe.getSortie().getX() * unite, labyrinthe.getSortie().getY() * unite, unite, unite);
+        tampon.drawImage(startImage, labyrinthe.getEntree().getX() * unite, labyrinthe.getEntree().getY() * unite, unite, unite);
+        tampon.drawImage(endImage, labyrinthe.getSortie().getX() * unite, labyrinthe.getSortie().getY() * unite, unite, unite);
 
     }
 
     public void dessinSprite() {
         for (ISprite sprite : sprites) {
-            if(sprite instanceof HerosSprite){
-                light.setX(sprite.getPosition().getX()*unite);
-                light.setY(sprite.getPosition().getY()*unite);
+            if (sprite instanceof HerosSprite) {
+                light.setX(sprite.getPosition().getX() * unite);
+                light.setY(sprite.getPosition().getY() * unite);
             }
             sprite.dessiner(tampon);
+
         }
     }
 

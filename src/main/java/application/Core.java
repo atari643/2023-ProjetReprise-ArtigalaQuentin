@@ -56,12 +56,6 @@ public class Core {
             // choix et deplacement
             for (IPersonnage p : vue) {
                 Collection<ISalle> sallesAccessibles = labyrinthe.sallesAccessibles(p);
-                if (p.equals(heros)) {
-                    for (int i = 0; i < 15; i++) {
-                        p.faitSonChoix(sallesAccessibles); // on demande au personnage de faire son choix de salle}
-                        temporisation(7);
-                    }
-                }
                 destination = p.faitSonChoix(sallesAccessibles); // on demande au personnage de faire son choix de salle}
                 p.setPosition(destination); // deplacement
 
@@ -85,7 +79,7 @@ public class Core {
                 System.out.println("Perdu !");
                 System.out.println("Plus que " + vue.size() + " personnages ...");
             }
-            temporisation(10);
+            temporisation(50);
         }
         System.out.println("Gagné!");
     }

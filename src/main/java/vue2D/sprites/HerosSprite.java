@@ -20,7 +20,7 @@ import personnages.Heros;
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
 
     protected Heros heros;
-    
+
     protected String direction;
 
     public HerosSprite(Heros heros, ILabyrinthe labyrinthe) {
@@ -28,25 +28,26 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
         this.heros = heros;
     }
 
+
     @Override
     public ISalle faitSonChoix(Collection<ISalle> sallesAccessibles) {
         if (sallesAccessibles.contains(heros.salleChoisi)) {
             switch (direction) {
                 case "LEFT":
-                    super.setCoordonnees(xSprite - 1, ySprite);
-                    this.imgSprite=new Image("file:icons/link/LinkRunShieldL1.gif");
+                    super.setCoordonnees(xSprite - 15, ySprite);
+                    this.imgSprite = new Image("file:icons/link/LinkRunShieldL" + (xSprite % 6 != 0 ? xSprite % 6 : 1) + ".gif");
                     break;
                 case "UP":
-                    super.setCoordonnees(xSprite, ySprite - 1);
-                    this.imgSprite=new Image("file:icons/link/LinkRunU1.gif");
+                    super.setCoordonnees(xSprite, ySprite - 15);
+                    this.imgSprite = new Image("file:icons/link/LinkRunU" + (ySprite % 8 != 0 ? ySprite % 8 : 1) + ".gif");
                     break;
                 case "DOWN":
-                    super.setCoordonnees(xSprite, ySprite + 1);
-                    this.imgSprite=new Image("file:icons/link/LinkRunShieldD1.gif");
+                    super.setCoordonnees(xSprite, ySprite + 15);
+                    this.imgSprite = new Image("file:icons/link/LinkRunShieldD" + (ySprite % 6 != 0 ? ySprite % 6 : 1) + ".gif");
                     break;
                 case "RIGHT":
-                    super.setCoordonnees(xSprite + 1, ySprite);
-                    this.imgSprite=new Image("file:icons/link/LinkRunR1.gif");
+                    super.setCoordonnees(xSprite + 15, ySprite);
+                    this.imgSprite = new Image("file:icons/link/LinkRunR" + (xSprite % 6 != 0 ? xSprite % 6 : 1) + ".gif");
                     break;
             }
             return heros.salleChoisi;
@@ -61,19 +62,19 @@ public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
         switch (t.getCode()) {
             case LEFT:
                 heros.salleChoisi = new Salle(heros.getPosition().getX() - 1, heros.getPosition().getY());
-                direction="LEFT";
+                direction = "LEFT";
                 break;
             case UP:
                 heros.salleChoisi = new Salle(heros.getPosition().getX(), heros.getPosition().getY() - 1);
-                direction="UP";
+                direction = "UP";
                 break;
             case RIGHT:
                 heros.salleChoisi = new Salle(heros.getPosition().getX() + 1, heros.getPosition().getY());
-                direction="RIGHT";
+                direction = "RIGHT";
                 break;
             case DOWN:
                 heros.salleChoisi = new Salle(heros.getPosition().getX(), heros.getPosition().getY() + 1);
-                direction="DOWN";
+                direction = "DOWN";
                 break;
 
         }
