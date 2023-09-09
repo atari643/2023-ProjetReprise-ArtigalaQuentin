@@ -16,10 +16,21 @@ import personnages.IPersonnage;
  * @author qartigala
  */
 public abstract class ASprite implements ISprite {
-
+    /**
+     * l'attribut qui contient le personnage 
+     */
     protected IPersonnage personnage;
+    /**
+     * L'attribut qui contient la position abscisse du sprite du personnage
+     */
     protected int xSprite;
+    /**
+     * L'attribut qui contient la position ordonnée du sprite du personnage
+     */
     protected int ySprite;
+    /**
+     * L'attribut qui contient l'image du sprite du personnage 
+     */
     protected Image imgSprite;
 
     /**

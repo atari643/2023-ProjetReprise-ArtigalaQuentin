@@ -15,9 +15,15 @@ import vue2D.sprites.ISprite;
 */
 public class Vue extends AVue implements IVue{
     Dessin dessin;
+    /**
+     * L'attribut qui possède le labyrinthe
+     */
     ILabyrinthe labyrinthe;
     public Scene scene;
-    
+    /**
+     * Constructeur de la vue 
+     * @param labyrinthe le labyrinthe défini
+     */
     public Vue(ILabyrinthe labyrinthe){
         this.labyrinthe=labyrinthe;
         dessin = new Dessin(labyrinthe, this);

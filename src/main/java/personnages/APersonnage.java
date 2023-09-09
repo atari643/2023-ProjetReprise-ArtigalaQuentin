@@ -12,6 +12,9 @@ import labyrinthe.ISalle;
  * @author qartigala
  */
 public abstract class APersonnage implements IPersonnage {
+    /**
+     * L'attribut qui contient la position du personnage selon la salle où il est 
+     */
     private ISalle position;
     @Override
     public ISalle getPosition() {

@@ -8,14 +8,25 @@ import outils.Fichier;
 import personnages.IPersonnage;
 
 /**
- *
+ *La classe qui permet de créer le labyrinthe
  * @author INFO Professors team
  */
 public class Labyrinthe extends ArrayList<ISalle> implements ILabyrinthe {
-
+    /**
+     * la variable qui contient la salle où démarre le labyrinthe
+     */
     protected ISalle entree;
+    /**
+     * la variable qui contient la salle où fini le labyrinthe
+     */
     protected ISalle sortie;
+    /**
+     * la variable qui contient la largeur du labyrinthe
+     */
     private int largeur;
+    /**
+     * la variable qui contient la hauteur du labyrinthe
+     */
     private int hauteur;
 
     @Override

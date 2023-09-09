@@ -5,12 +5,17 @@
 package labyrinthe;
 
 /**
- *
+ * La classe qui permet de créer un Salle pour le labyrinthe
  * @author qartigala
  */
 public class Salle implements ISalle {
-
+    /**
+     * Coordonnée abscisse de la salle
+     */
     int x;
+    /**
+     * Coordonnée ordonné de la salle
+     */
     int y;
     /**
      * Création d'une salle

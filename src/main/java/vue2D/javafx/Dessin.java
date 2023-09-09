@@ -19,17 +19,47 @@ import vue2D.sprites.ISprite;
  * @author INFO Professors team
  */
 public class Dessin extends Canvas {
-
+    /**
+     * L'ensemble des sprites à dessiner 
+     */
     private Collection<ISprite> sprites;
+    /**
+     * Le labyrinthe qui a était défini
+     */
     private ILabyrinthe labyrinthe;
+    /**
+     * L'unite d'échelle graphique
+     */
     private int unite = 15;
+    /**
+     * La scène graphique où l'on dessine 
+     */
     private GraphicsContext tampon;
+    /**
+     * Image du sol
+     */
     private Image solImage;
+    /**
+     * Image des murs
+     */
     private Image wallImage;
+    /**
+     * Image de salles de départ 
+     */
     private Image startImage;
+    /**
+     * Image de salles d'arriver
+     */
     private Image endImage;
+    /**
+     * La lumière du personnage
+     */
     private Light.Point light;
-
+    /**
+     * Le constructeur de la zone de dessin
+     * @param labyrinthe le labyrinthe à déssiner
+     * @param sprites la liste des sprites à déssiner 
+     */
     public Dessin(ILabyrinthe labyrinthe, Collection<ISprite> sprites) {
         this.sprites = sprites;
         this.labyrinthe = labyrinthe;
@@ -49,7 +79,9 @@ public class Dessin extends Canvas {
         chargementImages();
         dessinFond();
     }
-
+    /**
+     * Fonction qui charge les images du fichier icons
+     */
     public void chargementImages() {
         solImage = new Image("file:icons/ground.gif");
         wallImage = new Image("file:icons/mur0.gif");
@@ -57,12 +89,16 @@ public class Dessin extends Canvas {
         endImage = new Image("file:icons/sortie.gif");
 
     }
-
+    /**
+     * Fonction qui dessine le sol du labyrinthe
+     */
     public void dessinFond() {
         tampon.drawImage(solImage, 0, 0, unite * labyrinthe.getLargeur(),
                 unite * labyrinthe.getHauteur());
     }
-
+    /**
+     * Fonction qui dessine les murs autour des salles
+     */
     public void dessinSalle() {
         for (int i = 0; i < labyrinthe.getLargeur(); i++) {
             for (int y = 0; y < labyrinthe.getHauteur(); y++) {
@@ -76,7 +112,9 @@ public class Dessin extends Canvas {
         tampon.drawImage(endImage, labyrinthe.getSortie().getX() * unite, labyrinthe.getSortie().getY() * unite, unite, unite);
 
     }
-
+    /**
+     * Fonction qui dessine les sprites
+     */
     public void dessinSprite() {
         for (ISprite sprite : sprites) {
             if (sprite instanceof HerosSprite) {

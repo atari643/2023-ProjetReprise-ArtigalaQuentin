@@ -12,12 +12,19 @@ import personnages.IPersonnage;
 import personnages.Monstre;
 
 /**
- *
+ * La classe qui permet de créer le sprite du personnage et de le déplacer
  * @author qartigala
  */
 public class MonstreSprite extends ASprite{
+     /**
+     * L'attribut qui contient le personnage du monstre
+     */
     protected Monstre monstre;
-
+    /**
+     * Constructeur du sprites du monstre 
+     * @param monstre le monstre
+     * @param labyrinthe le labyrinthe
+     */
     public MonstreSprite(Monstre monstre, ILabyrinthe labyrinthe) {
         super(monstre, new Image("file:icons/monstre0.gif"));
         this.monstre = monstre;

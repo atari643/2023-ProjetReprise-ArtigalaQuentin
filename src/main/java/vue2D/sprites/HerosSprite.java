@@ -14,15 +14,23 @@ import labyrinthe.Salle;
 import personnages.Heros;
 
 /**
- *
+ * La classe qui permet de créer le sprite du personnage et de le déplacer
  * @author qartigala
  */
 public class HerosSprite extends ASprite implements EventHandler<KeyEvent> {
-
+    /**
+     * L'attribut qui contient le personnage du heros
+     */
     protected Heros heros;
-
+    /**
+     * L'attribut qui contient la direction du heros
+     */
     protected String direction;
-
+    /**
+     * Fonction qui créer le sprite du heros 
+     * @param heros le heros 
+     * @param labyrinthe le labyrinthe  
+     */
     public HerosSprite(Heros heros, ILabyrinthe labyrinthe) {
         super(heros, new Image("file:icons/link/LinkRunShieldL1.gif"));
         this.heros = heros;

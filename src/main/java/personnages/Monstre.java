@@ -9,12 +9,18 @@ import java.util.Random;
 import labyrinthe.ISalle;
 
 /**
- *
+ * La classe qui permet de créer un monstre et de choisir une salle pour le déplacer 
  * @author qartigala
  */
 public class Monstre extends APersonnage {
+    /**
+     * La salle choisi aléatoirement pour déplacer le monstre
+     */
     protected ISalle salleChoisi;
-    
+    /**
+     * Contructeur d'une personnage qui est un monstre
+     * @param salle la salle dans lequel il est positionné
+     */
     public Monstre(ISalle salle){
          super.setPosition(salle);
     }

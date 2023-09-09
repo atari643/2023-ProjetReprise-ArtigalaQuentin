@@ -8,12 +8,18 @@ import java.util.Collection;
 import labyrinthe.ISalle;
 
 /**
- *
+ * La classe qui permet de créer un heros et de choisir une salle pour ce déplacer 
  * @author qartigala
  */
 public class Heros extends APersonnage{
+    /**
+     * La salle choisi par le joueur pour déplacer le héros
+     */
     public ISalle salleChoisi;
-    
+    /**
+     * Contructeur d'une personnage qui est un héros
+     * @param salle la salle dans lequel il est positionné
+     */
     public Heros(ISalle salle){
          super.setPosition(salle);
     }
